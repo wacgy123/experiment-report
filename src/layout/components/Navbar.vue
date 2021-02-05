@@ -9,20 +9,25 @@
 </template>
 
 <script>
+import IconSvg from "@/components/common/SvgIcon"
+import { mapGetters } from 'vuex'
 import Hamburger from '@/components/common/Hamburger'
 import Avatar from '@/components/common/Avatar'
 
 export default {
     name: "NavBar",
-    components: {Hamburger, Avatar},
+    components: {Hamburger, Avatar,IconSvg},
     data() {
         return {
-            sidebar:{
-                opened:true,
-            },
             activeIndex: '1',
             activeIndex2: '1'
         };
+    },
+    computed: {
+        ...mapGetters([
+            'sidebar',
+            // 'avatar'
+        ])
     },
     methods: {
         toggleSideBar() {

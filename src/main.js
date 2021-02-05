@@ -5,7 +5,13 @@ import App from './App.vue'
 import store from './store'
 import router from './router'
 import "@/styles/index.scss";
+import '@/icons' // icon
+import './permission' // permission control
 Vue.config.productionTip = false
+if (process.env.NODE_ENV === 'production') {
+    const { mockXHR } = require('../mock')
+    mockXHR()
+}
 Vue.use(ElementUI)
 
 new Vue({

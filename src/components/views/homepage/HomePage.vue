@@ -1,5 +1,6 @@
 <template>
     <el-container style="height: 500px; border: 1px solid #eee">
+<!--      <div>{{ $route.fullPath }}</div>-->
         <el-main>
             <el-table :data="tableData">
                 <el-table-column prop="date" label="日期" width="140">

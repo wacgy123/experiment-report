@@ -1,22 +1,27 @@
 <template>
     <div id="app">
-        <side-bar class="sidebar-container"/>
-        <div class="main-container">
-            <nav-bar/>
-            <home-page></home-page>
-        </div>
+      <router-view />
+<!--        <layout></layout>-->
+<!--        <side-bar class="sidebar-container"/>-->
+<!--        <div class="main-container">-->
+<!--            <nav-bar/>-->
+<!--            <home-page></home-page>-->
+<!--        </div>-->
     </div>
 </template>
 
 <script>
-import HomePage from "@/components/views/homepage/HomePage";
-import NavBar from "@/components/common/navbar/NavBar";
-import SideBar from "@/components/common/SideBar";
+// import HomePage from "@/components/views/homepage/HomePage";
+// import NavBar from "@/components/common/navbar/NavBar";
+// import SideBar from "@/layout/components/SideBar";
+// import Layout from "@/layout";
 
 export default {
 
     name: 'App',
-    components: {NavBar, HomePage,SideBar}
+    // components: {Layout
+        // , NavBar, HomePage,SideBar
+    // }
 }
 </script>
 
